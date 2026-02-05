@@ -3,6 +3,7 @@ import {
   TOWER_COST_START
 } from "./config.js";
 
+// state.js の createState の戻り値に追加
 export function createState(ui) {
   return {
     ui,
@@ -14,6 +15,9 @@ export function createState(ui) {
     enemies: [],
     towers: [],
     bullets: [],
+
+    // 追加：選択中タワー（参照 or null）
+    selectedTower: null,
 
     spawning: false,
     spawnLeft: 0,
