@@ -3,28 +3,31 @@ import {
   TOWER_COST_START
 } from "./config.js";
 
-// state.js の createState の戻り値に追加
 export function createState(ui) {
-  return {
-    ui,
-    lives: START_LIVES,
-    gold: START_GOLD,
-    wave: 0,
-    towerCost: TOWER_COST_START,
+  const s = { ui: null };
+  resetState(s, ui);
+  return s;
+}
 
-    enemies: [],
-    towers: [],
-    bullets: [],
+export function resetState(s, ui) {
+  s.ui = ui;
 
-    // 追加：選択中タワー（参照 or null）
-    selectedTower: null,
+  s.lives = START_LIVES;
+  s.gold = START_GOLD;
+  s.wave = 0;
+  s.towerCost = TOWER_COST_START;
 
-    spawning: false,
-    spawnLeft: 0,
-    spawnTimer: 0,
-    waveInProgress: false,
-    gameOver: false,
-  };
+  s.enemies = [];
+  s.towers = [];
+  s.bullets = [];
+
+  s.selectedTower = null;
+
+  s.spawning = false;
+  s.spawnLeft = 0;
+  s.spawnTimer = 0;
+  s.waveInProgress = false;
+  s.gameOver = false;
 }
 
 export function syncUI(s) {
