@@ -31,8 +31,9 @@ syncUI(state);
 
 attachInput(canvas, state);
 
+ui.startWave.addEventListener("click", () => startNextWave(state));
 ui.restart.addEventListener("click", () => {
-  resetState(state, ui);  // ★ stateを差し替えない
+  resetState(state, ui);
   syncUI(state);
 });
 
@@ -53,4 +54,3 @@ function loop(now) {
 }
 
 requestAnimationFrame(loop);
-
