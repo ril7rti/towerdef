@@ -1,4 +1,5 @@
 "use strict";
+console.log("main.js loaded");
 
 import { CANVAS_W, CANVAS_H, DT_MAX } from "./config.js";
 import { createState, syncUI, resetState } from "./state.js";
