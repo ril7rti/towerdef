@@ -29,9 +29,8 @@ syncUI(state);
 
 attachInput(canvas, state);
 
-ui.startWave.addEventListener("click", () => startNextWave(state));
 ui.restart.addEventListener("click", () => {
-  state = createState(ui);
+  resetState(state, ui);  // ★ stateを差し替えない
   syncUI(state);
 });
 
