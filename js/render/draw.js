@@ -10,7 +10,7 @@ export function draw(ctx, state, W, H) {
 
   drawGrid(ctx, W, H);
   drawPath(ctx);
-  drawTowers(ctx, state.towers);
+  drawTowers(ctx, state.towers, state.selectedTower);
   drawEnemies(ctx, state.enemies);
   drawBullets(ctx, state.bullets);
   drawCanvasUI(ctx, state, W, H);
