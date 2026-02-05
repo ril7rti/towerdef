@@ -1,7 +1,7 @@
 "use strict";
 
 import { CANVAS_W, CANVAS_H, DT_MAX } from "./config.js";
-import { createState, syncUI } from "./state.js";
+import { createState, syncUI, resetState } from "./state.js";
 import { attachInput } from "./input.js";
 import { startNextWave } from "./spawner.js";
 import { updateSpawner } from "./spawner.js";
