@@ -1,0 +1,65 @@
+/* style.css */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #0f1220;
+  color: #e9ecff;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", sans-serif;
+}
+
+.wrap {
+  max-width: 980px;
+  margin: 18px auto;
+  padding: 0 14px;
+}
+
+.bar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border: 1px solid #2a315a;
+  border-radius: 12px;
+  background: #131835;
+}
+
+.stats span {
+  display: inline-block;
+  margin-right: 14px;
+  opacity: 0.95;
+}
+
+.actions button {
+  background: #2a66ff;
+  border: none;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.actions button:hover { filter: brightness(1.05); }
+.actions button:active { transform: translateY(1px); }
+
+.stage {
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid #2a315a;
+  border-radius: 12px;
+  background: #0b0e1a;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background: #0b0e1a;
+}
+
+.hint {
+  margin-top: 10px;
+  font-size: 13px;
+  opacity: 0.85;
+}
