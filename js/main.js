@@ -25,6 +25,7 @@ const ui = {
   restart: document.getElementById("restart"),
 };
 
+console.log("canvas:", canvas, "startWaveBtn:", ui?.startWave);
 
 let state = createState(ui);
 syncUI(state);
