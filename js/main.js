@@ -1,15 +1,15 @@
 "use strict";
-console.log("main.js loaded");
 
 import { CANVAS_W, CANVAS_H, DT_MAX } from "./config.js";
 import { createState, syncUI, resetState } from "./state.js";
 import { attachInput } from "./input.js";
-import { startNextWave } from "./spawner.js";
-import { updateSpawner } from "./spawner.js";
+import { startNextWave, updateSpawner } from "./spawner.js";
 import { updateMovement } from "./systems/movement.js";
 import { updateCombat } from "./systems/combat.js";
 import { updateCleanup } from "./systems/cleanup.js";
 import { draw } from "./render/draw.js";
+
+console.log("main.js loaded");
 
 const canvas = document.getElementById("game");
 canvas.width = CANVAS_W;
@@ -24,6 +24,7 @@ const ui = {
   startWave: document.getElementById("startWave"),
   restart: document.getElementById("restart"),
 };
+
 
 let state = createState(ui);
 syncUI(state);
