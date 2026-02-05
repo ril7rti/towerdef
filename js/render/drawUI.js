@@ -1,6 +1,7 @@
 export function drawCanvasUI(ctx, state, W, H) {
   ctx.save();
   ctx.fillStyle = "rgba(255,255,255,0.9)";
+  ctx.fillText("タワーをクリックで選択 / U=攻撃+ (40) / I=射程+ (35)", 14, H - 18);
   ctx.font = "16px system-ui, sans-serif";
 
   if (state.gameOver) {
